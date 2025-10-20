@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Table wrapper */
+.table-wrapper {
+    overflow-x: auto;
+    padding: 30px;
+}
+
+/* Table styles */
+.movie-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.movie-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.movie-table thead th {
+    padding: 20px;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.movie-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.movie-table tbody tr:hover {
+    background: linear-gradient(90deg, #f8f9ff 0%, #e8eaff 100%);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.movie-table tbody td {
+    padding: 18px 20px;
+    font-size: 1em;
+}
+
+.top-three {
+    background: linear-gradient(90deg, #fff8e1 0%, #ffe082 100%);
+    font-weight: 600;
+}
+
+.top-three:hover {
+    background: linear-gradient(90deg, #fff59d 0%, #ffd54f 100%) !important;
+}
+
+.rank {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #667eea;
+    text-align: center;
+    width: 80px;
+}
+
+.top-three .rank {
+    color: #f57c00;
+    font-size: 1.5em;
+}
+
+.title {
+    font-weight: 600;
+    color: #1e3c72;
+}
+
+/* Earnings column */
+.earnings {
+    color: #2e7d32;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+}
+
+/* Year column */
+.movie-table tbody td:nth-child(2) {
+    color: #666;
+    font-weight: 500;
+}
+
+footer {
+    background: #f5f5f5;
+    padding: 25px 30px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    border-top: 3px solid #667eea;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    .subtitle {
+        font-size: 0.9em;
+    }
+    
+    .movie-table thead th,
+    .movie-table tbody td {
+        padding: 12px 10px;
+        font-size: 0.9em;
+    }
+    
+    .table-wrapper {
+        padding: 15px;
+    }
+}
+
+.top-three .rank::before {
+    content: "🏆 ";
+    font-size: 0.8em;
+}
